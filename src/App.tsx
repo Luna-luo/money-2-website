@@ -7,6 +7,7 @@ import {
   Redirect
 } from "react-router-dom";
 import styled from 'styled-components';
+import Nav from './components/Nav';
 
 const Wrapper = styled.div`
   border: 1px solid red;
@@ -21,55 +22,32 @@ const Main = styled.div`
   overflow: auto;
 `
 
-const Nav = styled.nav`
-  boder:1px solid blue;
-  > ul {
-    display:flex;
-    > li {
-      width:33.333%;
-      text-align:center;
-      padding:16px;
-    }
-  }
-`
+
 
 function App() {
-  return (
-    <Router>
-      <Wrapper>
-       <Main>
+  let router = <Router>
+    <Wrapper>
+      <Main>
         <Switch>
           <Route path="/tags">
-            <Tags />
+            <Tags/>
           </Route>
           <Route path="/money">
-            <Money />
+            <Money/>
           </Route>
           <Route path="/statistics">
-            <Statistics />
+            <Statistics/>
           </Route>
-          <Redirect exact from="/" to="/money" />
+          <Redirect exact from="/" to="/money"/>
           <Route path="*">
-            <NoMatch />
+            <NoMatch/>
           </Route>
         </Switch>
-       </Main>
-        <Nav>
-          <ul>
-            <li>
-              <Link to="/tags">标签页</Link>
-            </li>
-            <li>
-              <Link to="/money">记账页</Link>
-            </li>
-            <li>
-              <Link to="/statistics">统计页</Link>
-            </li>
-          </ul>
-        </Nav>
-      </Wrapper>
-    </Router>
-  );
+      </Main>
+      <Nav/>
+    </Wrapper>
+  </Router>;
+  return router;
 }
 
 function Tags() {
