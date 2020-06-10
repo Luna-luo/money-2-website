@@ -5,6 +5,7 @@ import {TagsSection} from './Money/TagsSection';
 import {CategorySection} from './Money/CategorySection';
 import {NumberPadSection} from './Money/NumberPadSection';
 import {NoteSection} from './Money/NoteSection';
+import {on} from 'cluster';
 
 const MyLayout = styled(Layout)`
   display:flex;
@@ -18,7 +19,16 @@ function Money() {
     note:'',
     category:'-' as Category,
     amount:0
-  })
+  });
+  type Selected = typeof selected;
+  const onChange = (obj:Partial<Selected>)=>{
+    setSelected(
+      {
+        ...selected,
+        ...obj
+      }
+    )
+  }
   return(
     <MyLayout>
       {selected.tags}
@@ -29,35 +39,17 @@ function Money() {
       <hr/>
       {selected.amount}
       <TagsSection value={selected.tags}
-                   onChange={(tags)=>setSelected(
-                     {...selected, tags:tags}
-                     )}/>
-
+                   onChange={(tags)=>onChange({tags})}/>
       <NoteSection value={selected.note}
-                   onChange={(note)=>{
-                     setSelected({
-                     ...selected,
-                     note:note
-                     })
-                   }}
+                   onChange={(note)=>onChange({note})}
       />
 
       <CategorySection value={selected.category}
-                       onChange={(category)=>{
-                         setSelected({
-                           ...selected,
-                           category:category
-                         })
-                       }}
+                       onChange={(category)=>{onChange({category})}}
       />
 
       <NumberPadSection value={selected.amount}
-                        onChange={(amount)=>{
-                          setSelected({
-                            ...selected,
-                            amount:amount
-                          })
-                        }}
+                        onChange={(amount)=>onChange({amount})}
                         onOk={()=>{}}
       />
 
