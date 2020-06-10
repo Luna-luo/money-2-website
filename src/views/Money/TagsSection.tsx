@@ -20,9 +20,10 @@ const Wrapper = styled.section`
     border-bottom: 1px solid #333; color:#666; margin-top: 8px
   }
 `
-const TagsSection: React.FC =()=>{
+type Props = {value:string[];onChange:(selected:string[])=>void}
+const TagsSection: React.FC<Props> =(props)=>{
   const [tags,setTags] = useState<string[]>(['衣','食','住','行']);
-  const [selectedTags,setSelectedTags] = useState<string[]>([])
+  const selectedTags = props.value;
   const onAddTag=()=>{
     const tagName =window.prompt('新标签的名称为')
     if(tagName!==null){
@@ -32,10 +33,10 @@ const TagsSection: React.FC =()=>{
   const onToggleTag=(tag:string)=>{
     const index = selectedTags.indexOf(tag)
     if (index >=0){
-      setSelectedTags(selectedTags.filter(t => t !== tag));
+      props.onChange(selectedTags.filter(t => t !== tag));
       //如果TAG已被选中，就复制所有没有被选中的TAG，作为新的selectedTag
     }else{
-      setSelectedTags([...selectedTags, tag])
+      props.onChange([...selectedTags, tag])
     }
   }
 
@@ -51,7 +52,6 @@ const TagsSection: React.FC =()=>{
             } className={getClass(tag)}
             >{tag}</li>)
         }
-
       </ol>
       <button onClick={onAddTag}>新增标签</button>
     </Wrapper>
