@@ -5,7 +5,6 @@ import {TagsSection} from './Money/TagsSection';
 import {CategorySection} from './Money/CategorySection';
 import {NumberPadSection} from './Money/NumberPadSection';
 import {NoteSection} from './Money/NoteSection';
-import {on} from 'cluster';
 
 const MyLayout = styled(Layout)`
   display:flex;
