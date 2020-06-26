@@ -19,6 +19,8 @@ export const useRecords = ()=>{
       return false
     }
     const record = {...newRecord,createAt:(new Date()).toISOString()}
-    setRecords([...records,record])}
+    setRecords([...records,record])
+    return true
+  }
   return{records, addRecord}
 }

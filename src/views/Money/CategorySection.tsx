@@ -5,7 +5,6 @@ const Wrapper = styled.section`
     font-size: 24px;
     > ul {
       display:flex;
-      background:#c4c4c4;
       > li {
         width: 50%;
         text-align:center;
@@ -42,7 +41,6 @@ const CategorySection: React.FC<Props> = (props)=>{
             onClick = {()=>{props.onChange(c)}}
         >{categoryMap[c]}</li>
         )}
-
       </ul>
     </Wrapper>
   )
