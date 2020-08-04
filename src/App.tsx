@@ -9,6 +9,8 @@ import {Tag} from './views/Tags/Tag';
 
 const AppWrapper = styled.div`
   color:#333;
+  max-width:520px;
+  margin:0 auto;
 `
 
 
@@ -34,7 +36,7 @@ function App() {
             <NoMatch/>
           </Route>
         </Switch>
-    </Router>;
+    </Router>
    </AppWrapper>
   return router;
 }

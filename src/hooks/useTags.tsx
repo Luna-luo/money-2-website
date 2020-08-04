@@ -4,6 +4,7 @@ import {useUpdate} from './useUpdate';
 
 const useTags = ()=>{//封装一个自定义HOOK
   const [tags,setTags] = useState<{id:number;name:string}[]>([]);
+  // const [deletedTag,setdeletedTags] = useState<{id:number;name:string}[]>([]);
   useEffect(()=>{
     let localTags = JSON.parse(window.localStorage.getItem('tags')||'[]')
     if (localTags.length === 0){
@@ -12,6 +13,7 @@ const useTags = ()=>{//封装一个自定义HOOK
         {id:createId(),name:'食'},
         {id:createId(),name:'住'},
         {id:createId(),name:'行'},
+        {id:createId(),name:'工资'},
       ]
     }
     setTags(localTags);},[]);
@@ -31,6 +33,7 @@ const useTags = ()=>{//封装一个自定义HOOK
     setTags(tags.map(tag=> tag.id===id?{id,name:name}:tag))
   };
   const deleteTag = (id:number)=>{
+    // setdeletedTags(id:,getName(id))
     setTags(tags.filter(tag=>tag.id !== id))
   }
   const addTag=()=>{

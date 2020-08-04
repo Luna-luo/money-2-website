@@ -45,7 +45,6 @@ function Statistics() {
     if(a[0]>b[0])return 1;
     return 0;
   })
-  console.log(array);
   return (
     <Layout>
       <CategoryWrapper>
@@ -58,9 +57,9 @@ function Statistics() {
         </Header>
         <div>
           {records.map(r=>{
-            return <Item key={r.createAt}>
+            return <Item>
               <div className="tags oneLine">
-                {r.tagIds.map(tagId => <span key={tagId}>{getName(tagId)}</span>)
+                {r.tagIds.map(tagId =><span key={tagId}>{getName(tagId)}</span>)
                   .reduce((result,span,index,array)=>
                     result.concat(index < array.length-1?[span,'，']:[span]),[] as ReactNode[])
                 }
@@ -71,7 +70,7 @@ function Statistics() {
               <div className="amount">
                 ￥{r.amount}
               </div>
-            </Item>
+            </Item>;
           })}
         </div>
       </div>)}

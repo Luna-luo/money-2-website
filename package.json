@@ -76,7 +76,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "deploy": "sh scripts/deploy.sh"
+    "giteedeploy": "sh scripts/gitee_deploy.sh",
+    "githubdeploy": "sh scripts/github_deploy.sh"
   },
   "eslintConfig": {
     "extends": "react-app"

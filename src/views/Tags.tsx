@@ -24,8 +24,6 @@ const TagList = styled.ol`
   }
 `
 
-
-
 function Tags() {
   const {tags,addTag} = useTags()
   return(

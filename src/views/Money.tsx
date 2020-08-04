@@ -31,6 +31,7 @@ function Money() {
   const onChange = (obj:Partial<Selected>)=>{
     setSelected({...selected, ...obj})
   }
+
   const submit = ()=>{
     if(addRecord(selected)){
       alert('保存成功')
@@ -54,7 +55,6 @@ function Money() {
                         onChange={(amount)=>onChange({amount})}
                         onOk={submit}
       />
-
 
     </MyLayout>
   );
