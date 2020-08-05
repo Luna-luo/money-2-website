@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/money-2-website/precache-manifest.6a69ede97e25c71d3cc496382d689659.js"
+  "/money-2-website/precache-manifest.f49f17b435860ef61b05f30840d3b309.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -35,5 +35,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/money-2-website/index.html"), {
   
-  blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
+
+
+  blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
 });

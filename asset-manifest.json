@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/money-2-website/static/css/main.7990ed03.chunk.css",
-    "main.js": "/money-2-website/static/js/main.d44e35ec.chunk.js",
-    "main.js.map": "/money-2-website/static/js/main.d44e35ec.chunk.js.map",
+
+    "main.js": "/money-2-website/static/js/main.ec96050c.chunk.js",
+    "main.js.map": "/money-2-website/static/js/main.ec96050c.chunk.js.map",
     "runtime-main.js": "/money-2-website/static/js/runtime-main.a38ab08f.js",
     "runtime-main.js.map": "/money-2-website/static/js/runtime-main.a38ab08f.js.map",
     "static/js/2.34d77c41.chunk.js": "/money-2-website/static/js/2.34d77c41.chunk.js",
     "static/js/2.34d77c41.chunk.js.map": "/money-2-website/static/js/2.34d77c41.chunk.js.map",
     "index.html": "/money-2-website/index.html",
-    "precache-manifest.6a69ede97e25c71d3cc496382d689659.js": "/money-2-website/precache-manifest.6a69ede97e25c71d3cc496382d689659.js",
+    "precache-manifest.f49f17b435860ef61b05f30840d3b309.js": "/money-2-website/precache-manifest.f49f17b435860ef61b05f30840d3b309.js",
     "service-worker.js": "/money-2-website/service-worker.js",
     "static/css/main.7990ed03.chunk.css.map": "/money-2-website/static/css/main.7990ed03.chunk.css.map",
     "static/js/2.34d77c41.chunk.js.LICENSE.txt": "/money-2-website/static/js/2.34d77c41.chunk.js.LICENSE.txt"
@@ -17,6 +18,6 @@
     "static/js/runtime-main.a38ab08f.js",
     "static/js/2.34d77c41.chunk.js",
     "static/css/main.7990ed03.chunk.css",
-    "static/js/main.d44e35ec.chunk.js"
+    "static/js/main.ec96050c.chunk.js"
   ]
 }
