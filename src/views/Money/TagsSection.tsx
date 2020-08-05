@@ -12,7 +12,7 @@ const Wrapper = styled.section`
     display:inline-block; padding: 3px 18px;
     font-size: 14px; margin: 8px 12px;
     &.selected{
-    background:#f80;
+    background:#e98f36;
     }
     }
   }

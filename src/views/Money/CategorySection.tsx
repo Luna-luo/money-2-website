@@ -14,11 +14,14 @@ const Wrapper = styled.section`
           content:'';
           display:block;
           height:3px;
-          background:#333;
+          background:#e98f36;
           position:absolute;
           bottom:0;
           width:100%;
           left:0;
+        }
+        &.selected{
+        color: #e98f36;
         }
       }
     }
